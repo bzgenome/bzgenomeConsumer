@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { BzgComponentsModule } from 'bzg-components';
 import { AppComponent } from './app.component';
+import { AppIconsComponent } from './app-icons/app-icons.component';
 const customGenomeConfiguration = {
   "icons-sprite-path": "assets/sprite.svg",
   "color-text-primary": "#555555",
@@ -22,7 +23,8 @@ const customGenomeConfiguration = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppIconsComponent
   ],
   imports: [
     BrowserModule,
