@@ -1,16 +1,89 @@
 <app-icons></app-icons>
 
+
+<h4>Variabilidad en componente bzg-header</h4>
 <bzg-header [srcLogo]="'#logo-bzg'"
             [srcIcon]="'#camera'"
-            [tagText]="'My App'"
-            [styleConfig]="{}">
+            [tagText]="'My App'">
   <bzg-user [email]="'scott.austin@mail.com'"
-            [fullName]="'Scott Austin'" >
+            [fullName]="'Scott Austin'">
   </bzg-user>
 </bzg-header>
 
 
-<bzg-button-primary (click)="addBrick()">Add brick</bzg-button-primary>
-<bzg-masonry>
-  <bzg-masonry-brick class="brick" *ngFor="let brick of bricks">{{brick.title}}</bzg-masonry-brick>
-</bzg-masonry>
+<bzg-header [srcLogo]="'#logo-bzg'"
+            [srcIcon]="'#camera'"
+            [tagText]="'My App'"
+            [styleConfig]="{
+              'color-header-primary': '#edf4aa',
+              'color-header-secondary': '#f44d74',
+              'color-header-fill': '#ffffff',
+              'color-icon-header-primary': '#b038cb',
+              'color-icon-header-secondary': '#cb5849',
+              'color-icon-header-fill': '#ffffff'}">
+  <bzg-user [email]="'scott.austin@mail.com'"
+            [fullName]="'Scott Austin'">
+  </bzg-user>
+</bzg-header>
+
+
+
+
+<bzg-header [srcLogo]="'#logo-bzg'"
+            [srcIcon]="'#connection'"
+            [tagText]="'My App'"
+            [styleConfig]="{
+              'color-header-primary': '#edf4aa',
+              'color-header-secondary': '#f44d74',
+              'color-header-fill': '#ffffff',
+              'color-icon-header-primary': '#b038cb',
+              'color-icon-header-secondary': '#cb5849',
+              'color-icon-header-fill': '#ffffff'}">
+  <bzg-user [email]="'scott.austin@mail.com'"
+            [fullName]="'Scott Austin'">
+  </bzg-user>
+</bzg-header>
+
+
+<bzg-header [srcLogo]="'#logo-bzg'"
+            [srcIcon]="'#camera'"
+            [tagText]="'My App'"
+            [styleConfig]="{
+              'color-header-primary': '#3C515D',
+              'color-header-secondary': '#374956',
+              'color-header-fill': '#ffffff',
+              'color-icon-header-primary': '#C31C2C',
+              'color-icon-header-secondary': '#011B21',
+              'color-icon-header-fill': '#ffffff'}">
+  <bzg-user [email]="'scott.austin@mail.com'"
+            [fullName]="'Scott Austin'">
+  </bzg-user>
+</bzg-header>
+
+
+
+<bzg-header [srcLogo]="'#logo-bzg'"
+            [srcIcon]="'#browser'"
+            [tagText]="'My App2'"
+            [styleConfig]="{'color-icon-header-primary': '#c8d448','color-icon-header-secondary': '#799532','color-icon-header-fill': '#ffffff','color-header-primary': '#647815','color-header-secondary': '#647815','color-header-fill': '#ffffff'}">
+  <bzg-user [email]="'charles.huffan@mail.com'"
+            [fullName]="'Charles John Huffam Dickens'"
+            [styleConfig]='{"color-user-info": "#ffffff","color-avatar": "#153d51","color-avatar-background": "#678934"}'>
+    <ul>
+      <li>1.sds</li>
+      <li>2.sds</li>
+    </ul>
+  </bzg-user>
+</bzg-header>
+
+
+
+<h4>Componente bzg-masonry</h4>
+<div class="consumer-content">
+  <bzg-button-primary (click)="addBrick()">Add brick</bzg-button-primary>
+  <bzg-button-secondary (click)="addBrick()">Add brick</bzg-button-secondary>
+  <bzg-masonry>
+    <bzg-masonry-brick class="brick" *ngFor="let brick of bricks">{{brick.title}}</bzg-masonry-brick>
+  </bzg-masonry>
+
+</div>
