@@ -11,7 +11,7 @@ export class AppComponent {
   bricks = [];
 
   constructor() {
-    for (let a = 0; a < 40; a++) {
+    for (let a = 0; a < 10; a++) {
       this.bricks.push({
         title: 'Brick ' + a,
         width: '300px'

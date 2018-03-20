@@ -80,8 +80,11 @@
 
 <h4>Componente bzg-masonry</h4>
 <div class="consumer-content">
-  <bzg-button-primary (click)="addBrick()">Add brick</bzg-button-primary>
-  <bzg-button-secondary (click)="addBrick()">Add brick</bzg-button-secondary>
+  <div class="consumer-content__actions">
+    <bzg-button-primary (click)="addBrick()">Add brick</bzg-button-primary>
+    <bzg-button-secondary (click)="addBrick()">Add brick</bzg-button-secondary>
+  </div>
+
   <bzg-masonry>
     <bzg-masonry-brick class="brick" *ngFor="let brick of bricks">{{brick.title}}</bzg-masonry-brick>
   </bzg-masonry>
