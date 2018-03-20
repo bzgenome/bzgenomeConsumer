@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  bricks = [];
+
+  constructor() {
+    for (let a = 0; a < 40; a++) {
+      this.bricks.push({
+        title: 'Brick ' + a,
+        width: '300px'
+      });
+    }
+  }
+
+
+  addBrick() {
+    this.bricks.push({title: 'New Brick'});
+  }
 }

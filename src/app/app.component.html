@@ -5,7 +5,12 @@
             [tagText]="'My App'"
             [styleConfig]="{}">
   <bzg-user [email]="'scott.austin@mail.com'"
-            [fullName]="'Scott Austin'"
-            [styleConfig]="{}">
+            [fullName]="'Scott Austin'" >
   </bzg-user>
 </bzg-header>
+
+
+<bzg-button-primary (click)="addBrick()">Add brick</bzg-button-primary>
+<bzg-masonry>
+  <bzg-masonry-brick class="brick" *ngFor="let brick of bricks">{{brick.title}}</bzg-masonry-brick>
+</bzg-masonry>
