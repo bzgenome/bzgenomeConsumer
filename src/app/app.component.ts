@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'app';
 
   bricks = [];
+  showModal = false;
 
   constructor() {
     for (let a = 0; a < 10; a++) {
@@ -21,6 +22,15 @@ export class AppComponent {
 
 
   addBrick() {
-    this.bricks.push({title: 'New Brick'});
+    // this.bricks.unshift({title: 'New Brick'});
+    this.bricks.splice(0, 0, {title: 'New Brick'});
+  }
+
+  openModal() {
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
   }
 }

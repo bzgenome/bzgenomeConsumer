@@ -1,7 +1,13 @@
 <app-icons></app-icons>
 
+<div class="consumer-content">
+  <h3>Bzg components</h3>
+  <span>
+    <strong>1. </strong>Comportamiento y variabilidad  en componente <strong>bzg-header</strong>
+  </span>
+</div>
 
-<h4>Variabilidad en componente bzg-header</h4>
+
 <bzg-header [srcLogo]="'#logo-bzg'"
             [srcIcon]="'#camera'"
             [tagText]="'My App'">
@@ -25,8 +31,6 @@
             [fullName]="'Scott Austin'">
   </bzg-user>
 </bzg-header>
-
-
 
 
 <bzg-header [srcLogo]="'#logo-bzg'"
@@ -61,7 +65,6 @@
 </bzg-header>
 
 
-
 <bzg-header [srcLogo]="'#logo-bzg'"
             [srcIcon]="'#browser'"
             [tagText]="'My App2'"
@@ -77,16 +80,47 @@
 </bzg-header>
 
 
+<div class="consumer-content">
+  <span>
+    <strong>2. </strong>Comportamiento y variabilidad  en componente <strong>bzg-masonry</strong>
+  </span>
+</div>
 
-<h4>Componente bzg-masonry</h4>
 <div class="consumer-content">
   <div class="consumer-content__actions">
-    <bzg-button-primary (click)="addBrick()">Add brick</bzg-button-primary>
     <bzg-button-secondary (click)="addBrick()">Add brick</bzg-button-secondary>
   </div>
 
-  <bzg-masonry>
-    <bzg-masonry-brick class="brick" *ngFor="let brick of bricks">{{brick.title}}</bzg-masonry-brick>
+  <bzg-masonry class="consumer-grid">
+    <bzg-masonry-brick class="consumer-grid__brick" *ngFor="let brick of bricks">{{brick.title}}</bzg-masonry-brick>
   </bzg-masonry>
-
 </div>
+
+
+<div class="consumer-content">
+  <span>
+    <strong>3. </strong>Comportamiento y variabilidad  en componente <strong>bzg-modal</strong>
+  </span>
+</div>
+
+
+<div class="consumer-content">
+  <div class="consumer-content__actions">
+    <bzg-button-primary (click)="openModal()">Open Modal</bzg-button-primary>
+  </div>
+</div>
+
+<bzg-modal title="Este es un modal de prueba"
+           [showModal]="showModal"
+           (cancel)="closeModal()">
+  <div class="consumer-content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna
+      aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi
+      consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <bzg-button-secondary (click)="closeModal()">Close</bzg-button-secondary>
+  </div>
+</bzg-modal>
