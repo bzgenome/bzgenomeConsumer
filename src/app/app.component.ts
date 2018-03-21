@@ -6,7 +6,8 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  textToTestEditor = 'app';
+  textToTestEditorRegex = '^[a-zA-Z0-9 _.ñÑáÁéÉíÍóÓúÚöÖüÜ\\s-_=/]{5,150}$';
 
   bricks = [];
   comboOptions = [];
@@ -40,5 +41,9 @@ export class AppComponent {
 
   closeModal() {
     this.showModal = false;
+  }
+
+  editorChange(event){
+    console.log(event);
   }
 }

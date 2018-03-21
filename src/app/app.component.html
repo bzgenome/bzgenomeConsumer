@@ -180,3 +180,23 @@
 </div>
 
 
+
+<div class="consumer-content">
+  <span>
+    <strong>6. </strong>Comportamiento y variabilidad  en componente <strong>bzg-bounce</strong>
+  </span>
+  <bzg-bounce></bzg-bounce>
+</div>
+
+
+<div class="consumer-content">
+  <span>
+    <strong>7. </strong>Comportamiento y variabilidad  en componente <strong>bzg-inline-editor</strong>
+  </span>
+  <bzg-inline-editor [value]="textToTestEditor"
+                     [regex]="textToTestEditorRegex"
+                     [regexError]="'El valor ingresado no es válido'"
+                     (changeValue)="editorChange($event)">
+  </bzg-inline-editor>
+</div>
+
