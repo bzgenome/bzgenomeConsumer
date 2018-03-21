@@ -124,3 +124,19 @@
     <bzg-button-secondary (click)="closeModal()">Close</bzg-button-secondary>
   </div>
 </bzg-modal>
+
+
+<div class="consumer-content">
+  <span>
+    <strong>4. </strong>Comportamiento y variabilidad  en componente <strong>bzg-combo</strong>
+  </span>
+
+  <bzg-combo id="comboTest"
+             formControlName="comboTest"
+             [listData]="comboOptions"
+             [displayField]="'otherProperty'"
+             [valueField]="'name'">
+  </bzg-combo>
+</div>
+
+

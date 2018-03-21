@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'app';
 
   bricks = [];
+  comboOptions = [];
   showModal = false;
 
   constructor() {
@@ -16,6 +17,13 @@ export class AppComponent {
       this.bricks.push({
         title: 'Brick ' + a,
         width: '300px'
+      });
+    }
+
+    for (let a = 0; a < 10; a++) {
+      this.comboOptions.push({
+        name: 'Option ' + a,
+        otherProperty: 'Value of ' + a
       });
     }
   }
